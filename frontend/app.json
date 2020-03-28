@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Tab Navigation Template",
-    "slug": "frontend",
+    "name": "Menu2Me",
+    "slug": "Menu2Me",
     "privacy": "public",
     "sdkVersion": "36.0.0",
     "platforms": [
