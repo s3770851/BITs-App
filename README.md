@@ -1,2 +1,2 @@
-# BITs-App
+# Menu2Me
 Hospitality App
