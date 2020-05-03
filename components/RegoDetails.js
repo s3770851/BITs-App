@@ -11,7 +11,6 @@ class RegoDetails extends Component {
         loading: false,
     }
     
-
     onPress = () =>{
         firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password)
         .then(this.onLoginSucess)
@@ -26,7 +25,6 @@ class RegoDetails extends Component {
             error: '',
             loading: false
         })
-
     }
     render () {
         return (
@@ -45,8 +43,6 @@ class RegoDetails extends Component {
                  onChangeText={password=> this.setState({password})}
                  /> 
                  
-                
-
                 <TouchableOpacity style={styles.loginBtn} onPress={() => firebase.auth().createUserWithEmailAndPassword(this.state.email,this.state.password)}>
                     <Text style={styles.loginText}>Create Account</Text>
                 </TouchableOpacity>  
@@ -56,10 +52,8 @@ class RegoDetails extends Component {
                 </TouchableOpacity>  
                     <Text style={styles.errorText}>
                          {this.state.error}
-                    </Text> 
-                         
-            </View>
-            
+                    </Text>                         
+            </View>           
         );
     }
 }
@@ -68,12 +62,9 @@ class RegoDetails extends Component {
 const styles = StyleSheet.create({
     container: {
     flex: 1,
-    padding: 20,
-    
-   
+    padding: 20,  
     },
  
-
      loginBtn:{
         width:"100%",
         backgroundColor:"#fb5b5a",
