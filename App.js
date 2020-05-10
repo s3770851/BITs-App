@@ -7,6 +7,8 @@ import Home from './components/LoginForm';
 import RestSelect from './components/RestSelect';
 import Loading from './components/Loading'
 import Register from './components/Register'
+import HungryJack from './components/HungryJack'
+
 const Stack = createStackNavigator();
 
 class App extends React.Component{
@@ -51,6 +53,8 @@ class App extends React.Component{
                   <Stack.Navigator>
                     <Stack.Screen name="Home" component={Home} />
                     <Stack.Screen name="Register" component={Register} />
+                    <Stack.Screen name="RestSelect" component={RestSelect} />
+                    <Stack.Screen name="HungryJack" component={HungryJack} />
                   </Stack.Navigator>
                 </NavigationContainer> 
 

@@ -18,24 +18,26 @@ import firebase from 'firebase'
         const pressHandler = (id) =>{
             console.log(id);
         }
+
+        
       return(
               
           <View style={styles.container}>
             <View style={styles.logoContainer}>
                 <Logo/>
-                </View>
-               
-              <FlatList
+                <Text style={styles.welcomeTxt}>Welcome, please select a restaurant for their menu.</Text>
+                <FlatList style={styles.flatLst}
               keyExtractor={(item) => item.id}
               data={restaurant}
               renderItem={({ item }) => (
                   <TouchableOpacity onPress={() => pressHandler(item.id)}>
                     <Text style={styles.txt} >{item.name}</Text>
                   </TouchableOpacity>
-                   
-               // style={styles.loginBtn}
               )}
                 />
+                </View>
+               
+              
     <TouchableOpacity style={{padding: 10}} onPress={() => firebase.auth().signOut()}>
                   <Text style={styles.loginText}>Sign Out</Text>
               </TouchableOpacity> 
@@ -44,21 +46,33 @@ import firebase from 'firebase'
   }
 
     const styles = StyleSheet.create({
-    container: {
-    flex: 1,
-    backgroundColor: '#000000',
-    paddingTop: 40,
-    paddingHorizontal: 20,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
- 
-  logoContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginBottom: 30,
+container: {
+  flex: 1,
+  backgroundColor: '#000000',
+  paddingTop: 10,
+  paddingHorizontal: 20,
+  alignItems: 'center',
+  justifyContent: 'center',
+},
 
+flatLst: {
+  marginTop: 2,
+  marginBottom: 10,
+},
+ 
+logoContainer: {
+  flex: 1,
+  justifyContent: 'center',
+  alignItems: 'center',
+  margin: 10,
+},
+
+welcomeTxt: {
+  color: 'white',
+  fontSize: 18,
+  alignSelf: 'center',
+  marginBottom: 10,
+  
 },
 
 loginText:{
@@ -67,36 +81,29 @@ loginText:{
   fontWeight: 'bold',
 },
 
- txt:{
-   color: '#17f40f',
+txt:{
+  color: '#17f40f',
   marginBottom: 20,
-   fontSize: 20,
-  
+  fontSize: 20,
+},
 
- },
+loginBtn:{
+  width:"100%",
+  backgroundColor:"#fb5b5a",
+  borderRadius:25,
+  height:50,
+  alignSelf:"center",
+  justifyContent:"center",
+  marginTop:40,
+  marginBottom:15,
+},
 
-  loginBtn:{
-    width:"100%",
-    backgroundColor:"#fb5b5a",
-    borderRadius:25,
-    height:50,
-    alignSelf:"center",
-    justifyContent:"center",
-    marginTop:40,
-    marginBottom:15,
-  },
-  item: {
-     // flex: 1,
-     // alignSelf: 'stretch',
-      marginTop: 24,
-      padding: 30,
-      backgroundColor: 'pink',
-      fontSize: 24,
-      //alignItems: 'center',
-     //justifyContent: 'center',
-      //borderBottomWidth: 1,
-      //borderBottomColor: '#eee',
-  },
+item: {
+  marginTop: 24,
+  padding: 30,
+  backgroundColor: 'pink',
+  fontSize: 24,
+},
 
 });
 

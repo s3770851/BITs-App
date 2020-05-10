@@ -4,21 +4,14 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import Logo from './Logo';
 import EmailAndPassword from './EmailandPassword';
 
-//import {useNavigation} from '@react-navigation/native';
-
-
-
 // create a component
-    //const LoginForm = () => {
+
     function LoginForm({navigation}){
-   // const navigation = useNavigation();
-    const pressHandler = () => {
-          
+    const pressHandler = () => {     
        navigation.navigate('Register')
     }
 
-    return (
-        
+    return (       
         <View style={styles.container}>
             <View style={styles.logoContainer}>
                 <Logo/>
