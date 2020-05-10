@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
        fontSize: 12,
        alignSelf: 'center',
        flexDirection: 'row',
-       marginTop: 80
+       marginTop: 2
     },
 
     emailAndPassword:{

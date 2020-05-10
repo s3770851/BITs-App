@@ -4,7 +4,6 @@ import firebase from 'firebase'
 import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
 
 
-//import { withNavigation } from 'react-navigation';
 // create a component
 class EmailandPassword extends Component { 
    
@@ -32,8 +31,7 @@ class EmailandPassword extends Component {
         })
     }
 
-    render (){
-     
+    render (){     
         return (
             
             <View style={styles.container}>
@@ -59,8 +57,7 @@ class EmailandPassword extends Component {
               
                     <Text style={styles.errorText}>
                          {this.state.error}
-                    </Text>    
-                     
+                    </Text>                        
             </View>
         );      
     }
@@ -80,7 +77,7 @@ const styles = StyleSheet.create({
         height:50,
         alignSelf:"center",
         justifyContent:"center",
-        marginTop:40,
+        marginTop:30,
         marginBottom:15,
       },
       inputText:{
@@ -103,7 +100,7 @@ const styles = StyleSheet.create({
         fontSize: 15,
         color: '#fff',
         alignSelf: 'center',
-        marginTop: 1,
+        marginTop: 30,
     },
       forgot:{
         color: '#17f40f',
@@ -114,4 +111,4 @@ const styles = StyleSheet.create({
 
 //make this component available to the app
 export default EmailandPassword;
-//export default withNavigation(EmailandPassword);
+
