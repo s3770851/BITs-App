@@ -1,33 +1,21 @@
-
-import React, { Component } from 'react';
-//import * as React from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
-import LoginForm from './components/LoginForm';
-import Register from './components/Register';
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import firebase from 'firebase'
+import { View, StyleSheet } from 'react-native';
+import Home from './components/LoginForm';
+import RestSelect from './components/RestSelect';
 import Loading from './components/Loading'
-import Navigator from './components/AppNavigator';
+import Register from './components/Register'
+const Stack = createStackNavigator();
 
-class App extends Component{
-
+class App extends React.Component{
 
   state={
-    loggedIn: null
+    loggedIn:null
   }
 
-  render(){
-    return(
-      <Navigator/>
-    );
-  }
-  render(){
-    return(
-      <Fire/>
-    );
-  }
-  
-
-  componentDidMount = () =>{
+  componentDidMount() {
     var firebaseConfig = {
       apiKey: "AIzaSyCSinEpdPYxtMr4vYYJA7H6R24bgWeDFFc",
       authDomain: "bits-app-deb3f.firebaseapp.com",
@@ -41,53 +29,52 @@ class App extends Component{
   
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
-
     firebase.auth().onAuthStateChanged(user => {
       if(user){
-                this.setState({
-                  loggedIn: true
-                })
+          this.setState({
+            loggedIn: true
+             })
       }else{
-                this.setState({
-                  loggedIn: false
-                })
+          this.setState({
+            loggedIn: false
+             })
       }
-    })
-
-  
+    }) 
   }
+
+ 
   renderContent = () =>{
+    
     switch(this.state.loggedIn){
+      case false:
+        return <NavigationContainer>
+                  <Stack.Navigator>
+                    <Stack.Screen name="Home" component={Home} />
+                    <Stack.Screen name="Register" component={Register} />
+                  </Stack.Navigator>
+                </NavigationContainer> 
+
       case true:
-       return <Register/>
+        return <RestSelect/>
 
-       case false:
-       return <Navigator/>
-
-       default:
-         return <Loading/>
+      default:
+        return <Loading/>
     }
   } 
   
-  render(){
-    return (
-     
-      <View style={styles.container}>
-      {this.renderContent()}      
+ render(){
+    return (         
+      <View style={styles.container}>   
+      {this.renderContent()}          
      </View>            
    );
   }
-
-
 }
 // define your styles
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-   
-    //backgroundColor: '#000000',
-    
+    justifyContent: 'center', 
   },
 });
 
