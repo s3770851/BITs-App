@@ -1,20 +1,14 @@
 //import liraries
-//import React, { Component } from 'react';
+
 import * as React from 'react';
-import { View, StyleSheet, Button} from 'react-native';
+import { View, StyleSheet} from 'react-native';
 import Logo from './Logo';
 import RegoDetails from './RegoDetails'
 
-
-// create a component
-//const Register = () => {
    export default function Register(){
- 
         return (
            
-      //  )  
-   // return (
-        <View style={styles.container}>
+         <View style={styles.container}>
              <View style={styles.logoContainer}>
                 <Logo/>
              </View>
@@ -26,15 +20,13 @@ import RegoDetails from './RegoDetails'
         </View>
     )
     }
-//};
+
 
 // define your styles
 const styles = StyleSheet.create({
     container: {
         flex: 1,
         paddingTop: 20,
-       // justifyContent: 'center',
-        //alignItems: 'center',
         backgroundColor: '#000000',
     },
 
@@ -58,5 +50,4 @@ const styles = StyleSheet.create({
     
 });
 
-//make this component available to the app
-//export default Register;
+

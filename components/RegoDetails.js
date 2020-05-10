@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, TextInput, TouchableOpacity, navigation } from 'react-native';
+import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
 import firebase from 'firebase'
+
+
 // create a component
 class RegoDetails extends Component {
-   // export default function RegoDetails(){
+
     state = {
         email:'',
         password:'',
@@ -11,7 +13,7 @@ class RegoDetails extends Component {
         loading: false,
     }
     
-    onPress = () =>{
+    onBottomPress = () =>{
         firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password)
         .then(this.onLoginSucess)
         .catch(err =>{
@@ -26,6 +28,7 @@ class RegoDetails extends Component {
             loading: false
         })
     }
+    
     render () {
         return (
 
@@ -43,9 +46,10 @@ class RegoDetails extends Component {
                  onChangeText={password=> this.setState({password})}
                  /> 
                  
-                <TouchableOpacity style={styles.loginBtn} onPress={() => firebase.auth().createUserWithEmailAndPassword(this.state.email,this.state.password)}>
+                <TouchableOpacity style={styles.loginBtn} onPress={this.onBottomPress}>
                     <Text style={styles.loginText}>Create Account</Text>
-                </TouchableOpacity>  
+                </TouchableOpacity> 
+                  
 
                 <TouchableOpacity style={{padding: 10}} onPress={() => firebase.auth().signOut()}>
                     <Text style={styles.loginText}>Sign Out</Text>

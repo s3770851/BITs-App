@@ -1,46 +1,41 @@
 //import liraries
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, TextInput, Button, TouchableOpacity } from 'react-native';
 import firebase from 'firebase'
-import Register from './Register';
-import { navigation } from '@react-navigation/stack';
-import LoginForm from './LoginForm';
+import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
+
+
+//import { withNavigation } from 'react-navigation';
 // create a component
 class EmailandPassword extends Component { 
    
-    state = {
+    state={
         email:'',
         password:'',
         error:'',
-        loading: false,
+        loading: false
     }
-
+    
     onBottomPress = () =>{
-        firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password)
-        .then(this.onLoginSucess)
-        .catch(err =>{
+        firebase.auth().signInWithEmailAndPassword(this.state.email,this.state.password)
+       .then(this.onLoginSucess)     
+        .catch(err => {
             this.setState({
                 error:err.message
             })
-        })
+        })       
     }
-
-    onSignUpPress = () =>{
-        return(
-        <Register/>
-        )
-    }
+   
     onLoginSucess = () =>{
         this.setState({
             error: '',
-            loading: false
+            loading: false          
         })
-
     }
-    render = () => {
-       
+
+    render (){
+     
         return (
-          
+            
             <View style={styles.container}>
                 <TextInput style={styles.inputText}
                  placeholder="Email..." 
@@ -57,42 +52,26 @@ class EmailandPassword extends Component {
                 <TouchableOpacity>
                  <Text style={styles.forgot}>Forgot Password?</Text>
                 </TouchableOpacity>
-
+           
                 <TouchableOpacity style={styles.loginBtn} onPress={this.onBottomPress}>
                     <Text style={styles.loginText}>LOGIN</Text>
                 </TouchableOpacity>  
+              
                     <Text style={styles.errorText}>
                          {this.state.error}
                     </Text>    
-                      
+                     
             </View>
-            
-        );
-        
+        );      
     }
-   
 }
 
 // define your styles
 const styles = StyleSheet.create({
     container: {
     flex: 1,
-    padding: 20,
-    
-    //backgroundColor: '#000000',
-  //  alignItems: 'center',
-  //  justifyContent: 'center',
-   
+    padding: 20,  
     },
-    /*inputView:{
-        width:"80%",
-        backgroundColor:"#fff",
-        borderRadius:25,
-        height:50,
-        marginBottom:20,
-        justifyContent:"center",
-        padding:20
-     },*/
 
      loginBtn:{
         width:"100%",
@@ -118,15 +97,16 @@ const styles = StyleSheet.create({
         color:"white",
         alignSelf: 'center',
         fontWeight: 'bold',
+        fontSize: 17,
       },
       errorText: {
-          fontSize: 19,
-          color: '#FE0A03',
-          alignSelf: 'center',
-
-      },
+        fontSize: 15,
+        color: '#fff',
+        alignSelf: 'center',
+        marginTop: 1,
+    },
       forgot:{
-        color:"white",
+        color: '#17f40f',
         fontSize:11,
         alignSelf: 'center',
       },
@@ -134,4 +114,4 @@ const styles = StyleSheet.create({
 
 //make this component available to the app
 export default EmailandPassword;
-
+//export default withNavigation(EmailandPassword);
