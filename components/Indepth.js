@@ -19,10 +19,12 @@ import Logo from './Logo';
                 <Itemname/>
             </View>
 
-            <View style={styles.Image}>
-            placeholder="insert image"
-                <Image/>
-            </View>
+            <View style={styles.image}>
+    <ImageBackground source={image} style={styles.image}>
+      <Text style={styles.text}>Inside</Text>
+    </ImageBackground>
+  </View>
+);
 
             <View style={styles.btnContainer}>
                 <TouchableOpacity onPress={pressHandler}>
@@ -57,7 +59,7 @@ const styles = StyleSheet.create({
         paddingBottom: 30,
     },
 
-    Image: {
+    image: {
        alignSelf: 'center',
        flexDirection: 'row',
        marginTop: 2
