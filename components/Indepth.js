@@ -21,7 +21,7 @@ import Logo from './Logo';
 
             <View style={styles.image}>
     <ImageBackground source={image} style={styles.image}>
-      <Text style={styles.text}>Inside</Text>
+      <Text style={styles.text}>ImagePlaceholder</Text>
     </ImageBackground>
   </View>
 );
