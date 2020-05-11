@@ -3,8 +3,9 @@ import React, {useState} from 'react';
 import { StyleSheet, Text, View, FlatList, TouchableOpacity } from 'react-native';
 import Logo from './Logo';
 import firebase from 'firebase'
+import Indepth from './Indepth'
 
-    export default function RestSelect() {
+    export default function RestSelect({navigation}) {
 
     const [restaurant, setRest] = useState([
         { id: '1', name: 'Hungry Jacks' },
@@ -15,10 +16,12 @@ import firebase from 'firebase'
         { id: '6', name: 'Curry Kings'},
     ]);
         
-        const pressHandler = (id) =>{
-            console.log(id);
-        }
-
+        // const pressHandler = (id) =>{
+        //     console.log(id);
+        // }
+        const pressHandler = () => {     
+          navigation.navigate('Indepth')
+       }
         
       return(
               
@@ -30,21 +33,21 @@ import firebase from 'firebase'
               keyExtractor={(item) => item.id}
               data={restaurant}
               renderItem={({ item }) => (
-                  <TouchableOpacity onPress={() => pressHandler(item.id)}>
+                  <TouchableOpacity onPress={pressHandler}>
                     <Text style={styles.txt} >{item.name}</Text>
                   </TouchableOpacity>
               )}
                 />
                 </View>
                
-              
+             
     <TouchableOpacity style={{padding: 10}} onPress={() => firebase.auth().signOut()}>
                   <Text style={styles.loginText}>Sign Out</Text>
               </TouchableOpacity> 
           </View>
       );
   }
-
+//item.id
     const styles = StyleSheet.create({
 container: {
   flex: 1,

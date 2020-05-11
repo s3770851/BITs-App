@@ -6,7 +6,7 @@ import Logo from './Logo';
 
 // create a component
 
-    function Indepth({navigation}) {
+    export default function Indepth({navigation}) {
             const pressHandler = () => {     
                navigation.navigate('mvf5')
     return (       
@@ -35,7 +35,7 @@ import Logo from './Logo';
     );
 };
 
-
+    }
 
 // define your styles
 const styles = StyleSheet.create({
@@ -71,4 +71,4 @@ const styles = StyleSheet.create({
 });
 
 //make this component available to the app
-export default Indepth}
+//export default Indepth;
