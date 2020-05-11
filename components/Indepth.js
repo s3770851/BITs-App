@@ -1,37 +1,72 @@
+//import libraries
 import * as React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import Logo from './Logo'
- function Indepth() {
-  const PressHandler = () => {
-    Navigation.navigate("")
-  }
-  return (
-  
-    <View style={styles.container}>
-	<Logo/>
-      <Text style={styles.menuTxt}>WOAH YANKEE WITH NO BRIM</Text>
-    </View>
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import Logo from './Logo';
 
-    <View style={styles.btnContainer}>
-<TouchableOpacity onPress={PressHandler}>
-  <Text style={styles.accountbtn}> Want to see more info?</Text>
-</TouchableOpacity>
-      </View>
-  );
-}
 
+// create a component
+
+    function Indepth({navigation}) {
+            const pressHandler = () => {     
+               navigation.navigate('mvf5')
+    return (       
+        <View style={styles.container}>
+            <View style={styles.logoContainer}>
+                <Logo/>
+            </View>
+
+            <View style={styles.Itemname}>
+                <Itemname/>
+            </View>
+
+            <View style={styles.Image}>
+            placeholder="insert image"
+                <Image/>
+            </View>
+
+            <View style={styles.btnContainer}>
+                <TouchableOpacity onPress={pressHandler}>
+                    <Text style={styles.accountBtn}>Would you like to see more info? </Text>
+                </TouchableOpacity>  
+            </View>
+        </View>
+    );
+};
+
+
+
+// define your styles
 const styles = StyleSheet.create({
-  container: {
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: '#2c3e50',
-  },
+    container: {
+        flex: 1,
+        backgroundColor: '#000000',
+        padding: 20     
+    },
 
-  menuTxt: {
-      color: 'white',
-      fontSize: 18,
-      alignSelf: 'center',
-      marginBottom: 10,
-  }
+    btnContainer: {
+        flex: 1,    
+        justifyContent: 'center',        
+        marginBottom: 50,   
+    },
+
+    logoContainer: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        paddingTop: 30,
+        paddingBottom: 30,
+    },
+
+    Image: {
+       alignSelf: 'center',
+       flexDirection: 'row',
+       marginTop: 2
+    },
+
+    emailAndPassword:{
+        flex:2
+    }
 });
+
+//make this component available to the app
+export default Indepth}

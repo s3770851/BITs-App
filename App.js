@@ -8,6 +8,7 @@ import RestSelect from './components/RestSelect';
 import Loading from './components/Loading'
 import Register from './components/Register'
 import HungryJack from './components/HungryJack'
+import Indepth from './components/Indepth';
 
 const Stack = createStackNavigator();
 
