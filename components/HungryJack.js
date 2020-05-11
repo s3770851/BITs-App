@@ -4,7 +4,7 @@ import { View, Text, StyleSheet } from 'react-native';
 import Logo from './Logo'
 
 // create a component
-export default function HungryJack() {
+export function HungryJack() {
     
         return (
             <View style={styles.container}>
@@ -34,4 +34,4 @@ const styles = StyleSheet.create({
 });
 
 //make this component available to the app
-
+export default HungryJack;
