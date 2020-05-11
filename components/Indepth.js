@@ -15,9 +15,9 @@ import Logo from './Logo';
                 <Logo/>
             </View>
 
-            <View style={styles.Itemname}>
+            {/* <View style={styles.Itemname}>
                 <Itemname/>
-            </View>
+            </View> */}
 
             <View style={styles.image}>
     <ImageBackground source={image} style={styles.image}>
