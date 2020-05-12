@@ -1,28 +1,30 @@
 //import liraries
 
 import * as React from 'react';
-import { View, Button, StyleSheet, TouchableOpacity} from 'react-native';
+import { View, StyleSheet, Text, TouchableOpacity} from 'react-native';
 import Logo from './Logo';
-import RegoDetails from './RegoDetails'
 
-   export default function Register({ navigation }){
 
-  
+   export default function RegSuccess({ navigation }){
         return (
            
          <View style={styles.container}>
              <View style={styles.logoContainer}>
                 <Logo/>
+                <Text style={styles.welcomeTxt}>Registration Successfull!</Text>
              </View>
            
              <View style={styles.regoDetails}>
-                <RegoDetails/>
+             <TouchableOpacity style={{ padding: 10, }} onPress={() => navigation.navigate('Home')}>
+          <Text style={styles.loginText}>Back to Login</Text>
+        </TouchableOpacity>
+             {/* <Button
+        title="Back to Login"
+        onPress={() => navigation.navigate('LoginForm')}
+      /> */}
              </View> 
+
              
-             <Button
-        title="Go to Details"
-        onPress={() => navigation.navigate('Details')}
-      />
                     
         </View>
     )
@@ -43,6 +45,13 @@ const styles = StyleSheet.create({
         alignItems: 'center',
 
     },
+    welcomeTxt: {
+        color: 'white',
+        fontSize: 15,
+        alignSelf: 'center',
+        marginBottom: 10,
+        
+      },
 
     regoDetails: {
         flex: 2,
@@ -53,6 +62,11 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         marginBottom: 15,     
     },
+    loginText:{
+        color:"white",
+        alignSelf: 'center',
+        fontWeight: 'bold',
+      },
     
  
     

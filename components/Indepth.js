@@ -1,14 +1,15 @@
 //import libraries
-import * as React from 'react';
+import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import Logo from './Logo';
 
 
 // create a component
 
-    export default function Indepth({navigation}) {
+     function Indepth({navigation}) {
             const pressHandler = () => {     
                navigation.navigate('mvf5')
+            }
     return (       
         <View style={styles.container}>
             <View style={styles.logoContainer}>
@@ -35,7 +36,7 @@ import Logo from './Logo';
     );
 };
 
-    }
+    
 
 // define your styles
 const styles = StyleSheet.create({
@@ -71,4 +72,4 @@ const styles = StyleSheet.create({
 });
 
 //make this component available to the app
-//export default Indepth;
+export default Indepth;

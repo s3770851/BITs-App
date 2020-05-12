@@ -3,17 +3,19 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import firebase from 'firebase'
 import { View, StyleSheet } from 'react-native';
-import Home from './components/LoginForm';
 import RestSelect from './components/RestSelect';
 import Loading from './components/Loading'
 import Register from './components/Register'
 import HungryJack from './components/HungryJack'
 import Indepth from './components/Indepth';
+import LoginForm from './components/LoginForm';
+import DetailsScreen from './components/DetailsScreen';
+import RegSuccess from './components/RegSuccess';
 
 const Stack = createStackNavigator();
 
 class App extends React.Component{
-
+  
   state={
     loggedIn:null
   }
@@ -44,38 +46,48 @@ class App extends React.Component{
       }
     }) 
   }
-
+  
  
-  renderContent = () =>{
-    
-    switch(this.state.loggedIn){
-      case false:
+ renderContent = () =>{
+  
+   switch(this.state.loggedIn){
+     case false:
         return <NavigationContainer>
-                  <Stack.Navigator>
-                    <Stack.Screen name="Home" component={Home} />
-                    <Stack.Screen name="Register" component={Register} />
-                    <Stack.Screen name="RestSelect" component={RestSelect} />
-                    <Stack.Screen name="HungryJack" component={HungryJack} />
-                    <Stack.Screen name="Indepth" component={Indepth} />
-                  </Stack.Navigator>
-                </NavigationContainer> 
+          <Stack.Navigator initialRouteName="Home">
+          <Stack.Screen name="Home" component={LoginForm} options={{ title: 'Login' }}/>
+          <Stack.Screen name="Register" component={Register} options={{ title: 'Registration' }}/>
+          <Stack.Screen name='RestSelect' component={RestSelect} options={{ title: 'Restaurant Select' }} />
+          <Stack.Screen name="HungryJack" component={HungryJack} options={{ title: 'Hungry Jacks' }}/>
+          <Stack.Screen name="Indepth" component={Indepth} />
+          <Stack.Screen name="Details" component={DetailsScreen} />
+          <Stack.Screen name="RegSuccess" component={RegSuccess} options={{ title: 'Registration Successful' }}/>
+        </Stack.Navigator>
+      </NavigationContainer>  
 
-      case true:
-        return <RestSelect/>
-
-      default:
-        return <Loading/>
-    }
-  } 
+     case true:
+       return <DetailsScreen/> 
+                
+     default:
+       return <Loading/>
+    
+   }
+ 
+ } 
   
  render(){
-    return (         
-      <View style={styles.container}>   
-      {this.renderContent()}          
+    return (        
+     
+      <View style={styles.container}>
+      {this.renderContent()}            
      </View>            
    );
   }
 }
+
+
+ 
+  
+
 // define your styles
 const styles = StyleSheet.create({
   container: {

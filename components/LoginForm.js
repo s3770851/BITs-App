@@ -1,6 +1,6 @@
 //import libraries
 import * as React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet,  TouchableOpacity } from 'react-native';
 import Logo from './Logo';
 import EmailAndPassword from './EmailandPassword';
 
@@ -16,7 +16,7 @@ import EmailAndPassword from './EmailandPassword';
             <View style={styles.logoContainer}>
                 <Logo/>
             </View>
-
+            
             <View style={styles.emailAndPassword}>
                 <EmailAndPassword/>
             </View>
@@ -26,6 +26,8 @@ import EmailAndPassword from './EmailandPassword';
                     <Text style={styles.accountBtn}>Don't have an account yet? Signup</Text>
                 </TouchableOpacity>  
             </View>
+            
+
         </View>
     );
 };

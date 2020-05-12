@@ -4,6 +4,7 @@ import firebase from 'firebase'
 import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
 
 
+
 // create a component
 class EmailandPassword extends Component { 
    
@@ -27,7 +28,8 @@ class EmailandPassword extends Component {
     onLoginSucess = () =>{
         this.setState({
             error: '',
-            loading: false          
+            loading: false 
+                     
         })
     }
 
@@ -54,7 +56,7 @@ class EmailandPassword extends Component {
                 <TouchableOpacity style={styles.loginBtn} onPress={this.onBottomPress}>
                     <Text style={styles.loginText}>LOGIN</Text>
                 </TouchableOpacity>  
-              
+             
                     <Text style={styles.errorText}>
                          {this.state.error}
                     </Text>                        

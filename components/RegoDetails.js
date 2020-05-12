@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TextInput, TouchableOpacity} from 'react-native';
 import firebase from 'firebase'
 
 
@@ -11,6 +11,7 @@ class RegoDetails extends Component {
         password:'',
         error:'',
         loading: false,
+       
     }
     
     onBottomPress = () =>{
@@ -25,7 +26,8 @@ class RegoDetails extends Component {
     onLoginSucess = () =>{
         this.setState({
             error: '',
-            loading: false
+            loading: false,
+            
         })
     }
     
@@ -45,11 +47,11 @@ class RegoDetails extends Component {
                  value={this.state.password}
                  onChangeText={password=> this.setState({password})}
                  /> 
-                 
+               
                 <TouchableOpacity style={styles.loginBtn} onPress={this.onBottomPress}>
                     <Text style={styles.loginText}>Create Account</Text>
                 </TouchableOpacity> 
-                  
+                
 
                 <TouchableOpacity style={{padding: 10}} onPress={() => firebase.auth().signOut()}>
                     <Text style={styles.loginText}>Sign Out</Text>
