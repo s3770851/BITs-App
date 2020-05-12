@@ -57,6 +57,8 @@ class App extends React.Component{
                     <Stack.Screen name="RestSelect" component={RestSelect} />
                     <Stack.Screen name="HungryJack" component={HungryJack} />
                     <Stack.Screen name="Indepth" component={Indepth} />
+                    <Stack.Screen name="DietReq" component={DietReq}/>
+
                   </Stack.Navigator>
                 </NavigationContainer> 
 
