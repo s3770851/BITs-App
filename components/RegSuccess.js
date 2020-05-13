@@ -3,20 +3,22 @@
 import * as React from 'react';
 import { View, StyleSheet, Text, TouchableOpacity} from 'react-native';
 import Logo from './Logo';
+import { NavigationActions } from 'react-navigation';
 
 
-   export default function RegSuccess({ navigation }){
+    function RegSuccess({navigation}){
+    
         return (
            
          <View style={styles.container}>
              <View style={styles.logoContainer}>
                 <Logo/>
-                <Text style={styles.welcomeTxt}>Registration Successfull!</Text>
+                <Text style={styles.welcomeTxt}>Registration Successful..!</Text>
              </View>
            
              <View style={styles.regoDetails}>
-             <TouchableOpacity style={{ padding: 10, }} onPress={() => navigation.navigate('Home')}>
-          <Text style={styles.loginText}>Back to Login</Text>
+             <TouchableOpacity style={{ padding: 10, }} onPress={() => navigation.navigate( 'Details')}>
+          <Text style={styles.loginText}>Proceed to Login</Text>
         </TouchableOpacity>
              {/* <Button
         title="Back to Login"
@@ -72,4 +74,4 @@ const styles = StyleSheet.create({
     
 });
 
-
+export default RegSuccess;

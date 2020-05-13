@@ -19,7 +19,7 @@ function RestSelect({ navigation }) {
     //     console.log(id);
     // }
     const pressHandler = () => {
-      navigation.navigate();
+      navigation.navigate('HungryJack');
     };
     // navigation.navigate(item.id)
     return (<View style={styles.container}>

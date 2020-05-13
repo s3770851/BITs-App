@@ -11,9 +11,10 @@ import Indepth from './components/Indepth';
 import LoginForm from './components/LoginForm';
 import DetailsScreen from './components/DetailsScreen';
 import RegSuccess from './components/RegSuccess';
+import LoginSuccess from './components/LoginSuccess';
 
 const Stack = createStackNavigator();
-
+const Stack1 = createStackNavigator();
 class App extends React.Component{
   
   state={
@@ -53,23 +54,29 @@ class App extends React.Component{
    switch(this.state.loggedIn){
      case false:
         return <NavigationContainer>
-          <Stack.Navigator initialRouteName="Home">
+          <Stack.Navigator initialRouteName="Home">         
           <Stack.Screen name="Home" component={LoginForm} options={{ title: 'Login' }}/>
           <Stack.Screen name="Register" component={Register} options={{ title: 'Registration' }}/>
-          <Stack.Screen name='RestSelect' component={RestSelect} options={{ title: 'Restaurant Select' }} />
-          <Stack.Screen name="HungryJack" component={HungryJack} options={{ title: 'Hungry Jacks' }}/>
-          <Stack.Screen name="Indepth" component={Indepth} />
-          <Stack.Screen name="Details" component={DetailsScreen} />
-          <Stack.Screen name="RegSuccess" component={RegSuccess} options={{ title: 'Registration Successful' }}/>
-        </Stack.Navigator>
-      </NavigationContainer>  
+          
+          </Stack.Navigator>
+              </NavigationContainer>
+         
+        
 
      case true:
-       return <DetailsScreen/> 
-                
-     default:
-       return <Loading/>
-    
+       return  <NavigationContainer>
+       <Stack1.Navigator>
+       
+       <Stack1.Screen name="RegSuccess" component={RegSuccess} options={{ title: 'Registration Successful' }}/>
+       <Stack1.Screen name='RestSelect' component={RestSelect} options={{ title: 'Restaurant Select' }} />
+          <Stack1.Screen name="HungryJack" component={HungryJack} options={{ title: 'Hungry Jacks' }}/>
+          <Stack1.Screen name="Indepth" component={Indepth} />
+          <Stack1.Screen name="Details" component={DetailsScreen} /> 
+          <Stack1.Screen name="LoginSuccess" component={LoginSuccess} options={{ title: 'Login Successful' }}/>
+       
+          </Stack1.Navigator>
+        </NavigationContainer>
+       
    }
  
  } 

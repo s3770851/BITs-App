@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
-import { StyleSheet, Text, View, FlatList, TouchableOpacity, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, FlatList, TouchableOpacity, Button } from 'react-native';
 import Logo from './Logo';
 import firebase from 'firebase'
 
 
-function DetailsScreen({ navigation }) {
+function DetailsScreen({navigation}) {
+    
     const [restaurant] = useState([
         { id: '1', name: 'Hungry Jacks' },
         { id: '2', name: 'McDonalds' },
@@ -13,9 +14,11 @@ function DetailsScreen({ navigation }) {
         { id: '5', name: 'Grilled'},
         { id: '6', name: 'Curry Kings'},
     ]);
-
+    
     return (
+       
     <View style={styles.container}>
+        
         <TouchableOpacity style={{padding: 10}} onPress={() => firebase.auth().signOut()}>
                     <Text style={styles.loginText}>Sign Out</Text>
                 </TouchableOpacity>  

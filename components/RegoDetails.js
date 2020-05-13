@@ -22,6 +22,7 @@ class RegoDetails extends Component {
                 error:err.message
             })
         })
+        
     }
     onLoginSucess = () =>{
         this.setState({
