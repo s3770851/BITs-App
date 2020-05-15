@@ -7,6 +7,18 @@
     {
       "id": 1,
       "name": "Nando's"
+    },
+    {
+      "id": 2,
+      "name": "McDonalds"
+    },
+    {
+      "id": 3,
+      "name": "Subway"
+    },
+    {
+      "id": 4,
+      "name": "Grill'd"
     }
     ]
 }
