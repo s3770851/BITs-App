@@ -3,6 +3,10 @@
     {
       "id": 0,
       "name": "Hungry Jacks"
+    },
+    {
+      "id": 1,
+      "name": "Nando's"
     }
     ]
 }
