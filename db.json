@@ -1,10 +1,11 @@
-
-  {
-    "resturants":[
-    "id": 1,
-    "name": "Hungry Jacks"
-      ]
-  }
+{
+  "Restaurants":[
+    {
+      "id": 0,
+      "name": "Hungry Jacks"
+    }
+    ]
+}
 
 
  
