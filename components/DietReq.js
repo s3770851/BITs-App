@@ -1,9 +1,9 @@
 
 import React from 'react';
-import { View, SafeAreaView, FlatlListButton, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, SafeAreaView, FlatList, Text, StyleSheet, Button, TouchableOpacity } from 'react-native';
 import Logo from './Logo';
 import Constants from 'expo-constants';
-import { FlatList } from 'react-native-gesture-handler';
+
 
 const DATA = [
 { 
@@ -19,7 +19,7 @@ const DATA = [
         );
     }
 
-    export function DietReq({navigation}) {
+     function DietReq({navigation}) {
             const pressHandler = () => {     
                navigation.navigate('Indepth')
     return (       
@@ -27,20 +27,22 @@ const DATA = [
             <View style={styles.logoContainer}>
                 <Logo/>
                 </View>
-            </View>,
+               
 
     <View style={styles.itemtitle}>
         <Text>Whopper</Text>
       </View>,
             
-    <SafeAreaView style={styles.item}>
+    
         <FlatList
         data={DATA}
         renderItem={({ item }) => <Item title={item.title} />}
         keyExtractor={item => item.id}
         />
-    </SafeAreaView>
-    );
+   
+ 
+
+  
             
         <View style={styles.back}>
       <View>
@@ -51,10 +53,11 @@ const DATA = [
       </Button>
       </View>
     </View>
-
+    </View>
+    );
     };
 
-
+     }
 
 const styles = StyleSheet.create({
     container: {
@@ -95,4 +98,4 @@ const styles = StyleSheet.create({
 });
 
 
-export default DietReq}
+export default DietReq;

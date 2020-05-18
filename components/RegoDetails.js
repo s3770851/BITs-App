@@ -50,7 +50,7 @@ class RegoDetails extends Component {
                  /> 
                
                 <TouchableOpacity style={styles.loginBtn} onPress={this.onBottomPress}>
-                    <Text style={styles.loginText}>Create Account</Text>
+                    <Text style={styles.loginText}>Sign Up and Login</Text>
                 </TouchableOpacity> 
                 
 

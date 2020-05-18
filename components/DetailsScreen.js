@@ -19,14 +19,11 @@ function DetailsScreen({navigation}) {
        
     <View style={styles.container}>
         
-        <TouchableOpacity style={{padding: 10}} onPress={() => firebase.auth().signOut()}>
-                    <Text style={styles.loginText}>Sign Out</Text>
-                </TouchableOpacity>  
-                  
+                          
         <View style={styles.logoContainer}>
           <Logo />        
-          <Text style={styles.loginMsgTxt}>Logged In</Text>
-          <Text style={styles.welcomeTxt}>Welcome, please select to enter a restaurant.</Text>
+          
+          <Text style={styles.welcomeTxt}>Welcome, please select a restaurant.</Text>
          
           <FlatList style={styles.flatLst}
             data={restaurant}
@@ -76,8 +73,8 @@ function DetailsScreen({navigation}) {
   margin: 10,
   },
   welcomeTxt: {
-    color: 'white',
-    fontSize: 15,
+    color: '#0066FF',
+    fontSize: 16.5,
     alignSelf: 'center',
     marginBottom: 10,
     
