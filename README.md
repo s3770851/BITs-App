@@ -11,9 +11,9 @@ Table of contents
 <!--ts-->
    * [Table of contents](#table-of-contents)
    * [Installation](#installationandtesting)
-   * [GettingStarted](#getting started)
+   * [GettingStarted](#gettingstarted)
    * [Prerequesites](#prerequesites)
-   * [BuiltWith](#built with)
+   * [BuiltWith](#builtwith)
    * [Usage](#usage)
    * [Credits](#credits)
    * [Licence](#licence)
