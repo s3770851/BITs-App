@@ -10,7 +10,7 @@ Table of contents
 
 <!--ts-->
    * [Table of contents](#table-of-contents)
-   * [Installation](#installation and testing)
+   * [Installation](#installationandtesting)
    * [GettingStarted](#getting started)
    * [Prerequesites](#prerequesites)
    * [BuiltWith](#built with)
