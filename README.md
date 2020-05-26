@@ -42,7 +42,10 @@ These instructions will get you a copy of the project running on your local mach
 
 ## Usage:
 The user will need to register their email and password before starting. If a user has already previously registered, ten they can sign in directly from the sign-in screen. If a user has not logged out previously, they will not be required to login.
-Once registered or logged in, the user will be taken to a list of restaurants within the food court. The user can search for a restaurant or scroll through the list of displayed restaurants. When they have chosen their restaurant of choice, the menu for that restaurant will be displayed on the screen. The user can scroll through and select each item for purchase and place into shopping cart <i>yet to be developed</i>. The user can also choose to select more specific information such as nutritional information to be displayed for each item placed in the shopping cart.
+Once registered or logged in, the user will be taken to a list of restaurants within the food court. 
+The user can search for a restaurant or scroll through the list of displayed restaurants. When they have chosen their restaurant of choice, the menu for that restaurant will be displayed on the screen. 
+The user can scroll through and select each item for purchase and place into shopping cart <i>yet to be developed</i>. 
+The user can also choose to select more specific information such as nutritional information to be displayed for each item placed in the shopping cart.
 
 
 ## Credits: 
