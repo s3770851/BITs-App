@@ -6,7 +6,6 @@ The intention of this application is to enable people to order food directly fro
 We find that the importance of this application will be to minimise queuing at food courts and allow adequate social distancing to take place.
 
 Table of contents
-=================
 
 <!--ts-->
    * [Table of contents](#table-of-contents)
