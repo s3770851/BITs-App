@@ -2,7 +2,9 @@
 Hospitality App
 
 ## Description:
-The intention of this application is to enable people to order food directly from their chosen restaurant within a food court. The mission is to have the user be able to order from a menu and the order gets sent to the kitchen of the chosen restaurant. The user pays online and nominates a seating area to have the order delivered to.
+The intention of this application is to enable people to order food directly from their chosen restaurant within a food court. 
+The mission is to have the user be able to order from a menu and the order gets sent to the kitchen of the chosen restaurant. 
+The user pays online and nominates a seating area to have the order delivered to.
 We find that the importance of this application will be to minimise queuing at food courts and allow adequate social distancing to take place.
 
 ## Table of contents
