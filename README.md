@@ -10,10 +10,10 @@ Table of contents
 
 <!--ts-->
    * [Table of contents](#table-of-contents)
-   * [Installation](#installationandtesting)
-   * [GettingStarted](#gettingstarted)
+   * [Installation](#installation-and-testing)
+   * [Getting Started](#getting-started)
    * [Prerequesites](#prerequesites)
-   * [BuiltWith](#builtwith)
+   * [Built With](#built-with)
    * [Usage](#usage)
    * [Credits](#credits)
    * [Licence](#licence)
@@ -23,12 +23,12 @@ Table of contents
 ==================
 These instructions will get you a copy of the project running on your local machine for development and testing purposes.
 
-### Prerequisites
-=================
+## Prerequisites
+================
  `Expo 37.0.3` or greater recommended
 
-### Installation and Testing
-============================
+## Installation and Testing
+===========================
 - Clone the master repository to access all files and dependency versions
 - Run `npm install` to install all dependencies
 - Run `npm test` to test files
